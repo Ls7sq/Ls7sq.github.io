@@ -13,10 +13,23 @@
         document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
         });
+        // 禁用导出按钮（通过CSS隐藏按钮）
+        function disableExport() {
+            var iframe = document.querySelector('iframe');
+            if (iframe) {
+                var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+                var exportButton = iframeDocument.querySelector("[title='Export']");
+                if (exportButton) {
+                    exportButton.style.display = 'none';
+                }
+            }
+        }
+        // 检查并禁用导出按钮
+        setInterval(disableExport, 1000);
     </script>
 </head>
 <body>
     <h1>OneDrive Embedded File</h1>
-    <iframe src="https://onedrive.live.com/embed?resid=ADE97B89456FC2A6%2198332&authkey=!AJukiYlGaC7vWuU&em=2&wdAllowInteractivity=true&wdHideSheetTabs=true&wdHideHeaders=true&wdDownloadButton=False" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    <iframe src="https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY&em=2&wdAllowInteractivity=true&wdHideSheetTabs=true&wdHideHeaders=true&wdDownloadButton=false" width="2000" height="800" frameborder="0" scrolling="no"></iframe>
 </body>
 </html>
