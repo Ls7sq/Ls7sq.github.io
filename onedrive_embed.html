@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OneDrive Embed</title>
+    <script>
+        // 禁用打印功能
+        window.onload = function() {
+            window.print = function(){};
+        };
+        // 禁用右键菜单
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    </script>
 </head>
 <body>
     <h1>OneDrive Embedded File</h1>
-    <iframe src="https://onedrive.live.com/embed?resid=ADE97B89456FC2A6%2198332&authkey=!AJukiYlGaC7vWuU&em=2&wdHideSheetTabs=true&wdHideHeaders=true&wdDownloadButton=False" width="600" height="400" frameborder="0" scrolling="no"></iframe>
+    <iframe src="https://onedrive.live.com/embed?resid=ADE97B89456FC2A6%2198332&authkey=!AJukiYlGaC7vWuU&em=2&wdAllowInteractivity=true&wdHideSheetTabs=true&wdHideHeaders=true&wdDownloadButton=False" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 </body>
 </html>
