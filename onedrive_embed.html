@@ -3,33 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OneDrive Embed</title>
-    <script>
-        // 禁用打印功能
-        window.onload = function() {
-            window.print = function(){};
-        };
-        // 禁用右键菜单
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-        });
-        // 禁用导出按钮（通过CSS隐藏按钮）
-        function disableExport() {
-            var iframe = document.querySelector('iframe');
-            if (iframe) {
-                var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-                var exportButton = iframeDocument.querySelector("[title='Export']");
-                if (exportButton) {
-                    exportButton.style.display = 'none';
-                }
-            }
-        }
-        // 检查并禁用导出按钮
-        setInterval(disableExport, 1000);
-    </script>
+    <title>Go Capital</title>
 </head>
-<body>
-    <h1>OneDrive Embedded File</h1>
-    <iframe src="https://onedrive.live.com/embed?resid=ADE97B89456FC2A6%2198332&authkey=!AJukiYlGaC7vWuU&em=2&wdAllowInteractivity=true&wdHideSheetTabs=true&wdHideHeaders=true&wdDownloadButton=false" width="2000" height="800" frameborder="0" scrolling="no"></iframe>
+<body style="height: 100vh; width: 100vw">
+    <!-- Embedded Excel Iframe from OneDrive -->
+<iframe width="100%" height="100%" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=ADE97B89456FC2A6%2198338&authkey=%21APybhavYBf1qexg&em=2&wdAllowInteractivity=False&AllowTyping=True&ActiveCell='Linklogis_Sales'!B1&wdHideGridlines=True&wdInConfigurator=True&wdInConfigurator=True&wdDownloadButton=False&action=embedview&wdbipreview=true"></iframe>
 </body>
 </html>
